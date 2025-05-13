@@ -1,0 +1,42 @@
+{
+    "paduano": {
+        "password": "paduano1!",
+        "nome": "Paduano Gianluca",
+        "ruolo": "dipendente"
+    },
+    "esposito": {
+        "password": "esposito1!",
+        "nome": "Esposito Amalia",
+        "ruolo": "dipendente",
+        "device_id": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+    },
+    "matrone": {
+        "password": "matrone1!",
+        "nome": "Matrone Maurizio",
+        "ruolo": "dipendente",
+        "device_id": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+    },
+    "raiola": {
+        "password": "raiola1!",
+        "nome": "Raiola Jessica",
+        "ruolo": "dipendente",
+        "device_id": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+    },
+    "ruggiero": {
+        "password": "ruggiero1!",
+        "nome": "Ruggiero Antonietta",
+        "ruolo": "dipendente"
+    },
+    "vangone": {
+        "password": "vangone1!",
+        "nome": "Vangone Giovanni",
+        "ruolo": "dipendente",
+        "device_id": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/136.0.7103.91 Mobile/15E148 Safari/604.1"
+    },
+    "admin": {
+        "password": "admin123",
+        "nome": "Admin",
+        "ruolo": "admin",
+        "device_id": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+    }
+}

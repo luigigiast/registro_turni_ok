@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro Presenze</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Icona app per cellulare -->
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='logo.png') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='logo.png') }}">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#ffffff">
+
+    <style>
+        body {
+            background-image: url('{{ url_for('static', filename='sfondo.png') }}');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            text-align: center;
+            padding-top: 80px;
+            margin: 0;
+        }
+
+        .box {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 15px;
+            display: inline-block;
+        }
+
+        input[type="text"], input[type="password"] {
+            padding: 10px;
+            margin: 10px;
+            width: 250px;
+            border: none;
+            border-radius: 8px;
+        }
+
+        input[type="submit"], button {
+            padding: 10px 20px;
+            margin-top: 15px;
+            border: none;
+            border-radius: 8px;
+            background-color: #28a745;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        img {
+            max-width: 150px;
+            margin-top: 20px;
+        }
+
+        .messaggio {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <h2>Benvenuto nel Registro Presenze</h2>
+
+        {% if messaggio %}
+            <div class="messaggio">{{ messaggio }}</div>
+
+            {% if 'lupo' in messaggio.lower() %}
+                <img src="{{ url_for('static', filename='presenza.png') }}" alt="Presenza">
+            {% elif 'giornata' in messaggio.lower() %}
+                <img src="{{ url_for('static', filename='finet.png') }}" alt="Fine Turno">
+            {% endif %}
+        {% endif %}
+
+        {% if not fine_turno %}
+        <form method="POST">
+            <input type="text" name="username" placeholder="Cognome" required><br>
+            <input type="password" name="password" placeholder="Password" required><br>
+            <input type="submit" value="Accedi">
+        </form>
+        {% else %}
+        <form method="POST" action="/fine-turno">
+            <button type="submit">Fine Turno</button>
+        </form>
+        {% endif %}
+    </div>
+
+</body>
+</html>

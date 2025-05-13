@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Presenze</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Benvenuto nella pagina Admin</h1>
+    <p>Qui puoi visualizzare i dati delle presenze dei dipendenti e scaricare i report in formato CSV o Excel.</p>
+    
+    <!-- Tabella delle presenze -->
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Data</th>
+                <th>Ora Ingresso</th>
+                <th>Ora Uscita</th>
+                <th>Durata</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in dati %}
+                <tr>
+                    <td>{{ row[0] }}</td>
+                    <td>{{ row[1] }}</td>
+                    <td>{{ row[2] }}</td>
+                    <td>{{ row[3] }}</td>
+                    <td>{{ row[4] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <br>
+    <h3>Download report</h3>
+    <a href="/download-csv">Scarica CSV</a><br>
+    <a href="/download-xlsx">Scarica Excel</a><br>
+
+    <br><br>
+    <a href="/">Torna al login</a>
+</body>
+</html>
